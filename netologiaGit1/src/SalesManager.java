@@ -1,16 +1,17 @@
 public class SalesManager {
 
 
-    protected int[] sales;
+    protected long[] sales;
 
 
-    public SalesManager(int[] sales) {
+    public SalesManager(long[] sales) {
+
         this.sales = sales;
     }
 
-    public int max() {
-        int max = -1;
-        for (int sale : sales) {
+    public long max() {
+        long max = -1;
+        for (long sale : sales) {
             if (sale > max) {
                 max = sale;
             }
@@ -18,10 +19,10 @@ public class SalesManager {
         return max;
     }
 
-    public int average() {
-        int maxValue = 0;
-        int minValue = sales[0];
-        int sum = 0;
+    public long average() {
+        long maxValue = 0;
+        long minValue = sales[0];
+        long sum = 0;
 
         for (int j = 0; j < sales.length; j++) {
             if (sales[j] > maxValue) { maxValue = sales[j];
@@ -30,7 +31,7 @@ public class SalesManager {
             }
             sum += sales[j];
         }
-int averageM =  (sum - maxValue - minValue ) / (sales.length-2);
+long averageM =  (sum - maxValue - minValue ) / (sales.length-2);
         return averageM;
     }
 
